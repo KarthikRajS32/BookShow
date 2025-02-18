@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookyShowTickets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+  module.exports = {
+  theme: {
+    extend: {
+      screens: {
+        xs: '320px',  
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px',
+      },
+    },
+  },
+}
+</script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+   <div class="container flex flex-col sm:flex-row justify-center items-center justify-evenly p-5">
+    <div class="flex items-center justify-around gap-12">
+        <h2 class="roboto text-3xl font-bold items-center cursor-pointer">
+            book<span class="bg-red-500 text-white italic rounded">my</span>show
+        </h2>
+        <button id="menuButton" class="sm:hidden p-2 bg-blue-500 text-black rounded-md">
+                <div class="burger-icon flex flex-col justify-between w-4 h-4">
+                <div class="h-1 bg-white rounded"></div>
+                <div class="h-1 bg-white rounded"></div>
+                <div class="h-1 bg-white rounded"></div>
+                </div>
+        </button>
+    </div>
+    <div class="flex items-center border border-gray-300 rounded-xl p-1 w-full max-w-md hover:border-gray-500 focus-within:border-blue-500 mt-4 sm:mt-0">
+        <img class="w-5 h-5" src="./public/search.png" alt="search">
+        <input type="text" class="w-full p-2 outline-none bg-transparent placeholder-gray-500 text-gray-700" placeholder="Search for Movies, Events, Plays, Sports, and Activities">
+    </div>
+    <div class="flex justify-center items-center justify-around gap-6 mt-4 sm:mt-0">
+        <p class="roboto">chennai</p>
+        <button id="signin" type="button" class="border-2 h-9 w-20 bg-red-500 hover:bg-red-600 text-white border-none rounded">sign in</button>
+    </div>
+     
+   </div>
+
+
+    <div class="bg-gray-100 container-1">
+
+        <div id="menu" class="hidden sm:flex flex-col sm:flex-row justify-center items-center sm:justify-around p-4 ">
+    
+            <div class="flex flex-col sm:flex-row text-base sm:text-lg gap-3 roboto">
+                <ul>Movies</ul>
+                <ul>Stream</ul>
+                <ul>Events</ul>
+                <ul>Plays</ul>
+                <ul>Sports</ul>
+            </div>
+            <br>
+            <div class="flex flex-col sm:flex-row text-base sm:text-lg gap-3 roboto">
+                <ul>ListYourShow</ul>
+                <ul>Corporates</ul>
+                <ul>Offers</ul>
+                <ul>Gift Cards</ul>
+            </div>
+        </div>
+        <hr>
+        
+        <div class="slider p-4 border-none w-full overflow-hidden border-2 border-gray-300 rounded-lg relative">
+            <div class="slides flex w-full animate-slide">
+                <img src="./public/img1.avif" alt="Slide 1" class="w-full flex-shrink-0">
+                <img src="./public/img2.avif" alt="Slide 2" class="w-full flex-shrink-0">
+                <img src="./public/img3.avif" alt="Slide 3" class="w-full flex-shrink-0">
+                <img src="./public/img4.avif" alt="Slide 4" class="w-full flex-shrink-0">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bg-gray-100 p-2">
+       
+        <h1 class="roboto text-2xl font-bold p-4 sm:text-center md:text-center lg:text-left">Recommended Movies</h1>
+       
+        <div class="flex flex-wrap md:w[50%] md:grid-cols-2 sm:grid-cols-1 justify-center items-center justify-around gap-6">
+            <div>
+                <a href="https://in.bookmyshow.com/chennai/movies/vidaamuyarchi/ET00408788">
+                <img class=" w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105 " src="./public/vidamuyarchi.avif" alt="img1"><br>
+                <h3 class="roboto font-bold">Vidaamuyarchi</h3>
+                <p class="roboto action">Action/Mystery/Thriller</p>
+                </a>   
+            </div>
+           
+            <div>
+                <a href="https://in.bookmyshow.com/chennai/movies/kudumbasthan/ET00429890">
+                <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105" src="./public/kudumbasthan.avif" alt="img2"><br>
+                <h3 class="roboto font-bold">Kudumbasthan</h3>
+                <p class="roboto action">Comedy/Drama</p>
+                </a>    
+            </div>
+           
+            <div> 
+                <a href="https://in.bookmyshow.com/chennai/movies/thandel/ET00384012">
+                <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105" src="./public/thandel.avif" alt="img3"><br>
+                <h3 class="roboto font-bold">Thandel</h3>
+                <p class="roboto action">Action/Drama/Romantic</p>
+                </a>
+            </div>
+           
+            <div>
+               <a href="https://in.bookmyshow.com/chennai/movies/mr-housekeeping/ET00418699">
+               <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105" src="./public/housekeeping.avif" alt="img4"><br>
+               <h3 class="roboto font-bold">Mr.HouseKeeping</h3>
+               <p class="roboto action">Comedy/Drama/Romantic</p>
+               </a>
+            </div>
+           
+            <div>
+                <a href="https://in.bookmyshow.com/chennai/movies/madha-gaja-raja/ET00014665">
+                <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105" src="./public/madhagajaraja.avif" alt="img5"><br>
+                <h3 class="roboto font-bold">Madha Gaja Raja</h3>
+                <p class="roboto action">Action/Comedy</p>
+                </a>
+            </div> 
+        </div>
+    </div>
+
+
+     <div class="p-20 bg-gray-100 md:w[50%] p-10">
+        <a href="https://in.bookmyshow.com/explore/c/stream">
+            <img class="w-[100vw]" src="./public/stream.avif" alt="">
+        </a>
+    </div>
+
+
+     <div class="bg-gray-100 p-5">
+        <h1 class="roboto text-2xl font-bold p-8 sm:text-center md:text-center lg:text-left">The Best Of Live Events</h1>
+        <div class="flex flex-wrap justify-center items-center justify-evenly p-2 gap-6">
+            <div>
+                <a href="https://in.bookmyshow.com/explore/amusement-parks-chennai?referrerBase=">   
+                    <img class="h-[230px] w-[230px] rounded-lg transition-transform duration-500 hover:scale-105" src="./public/live-img1.avif" alt="live-img1">
+                </a>
+            </div>
+
+            <div>
+                <a href="https://in.bookmyshow.com/explore/workshops-chennai?referrerBase=">
+                    <img class="h-[230px] w-[230px] rounded-lg transition-transform duration-500 hover:scale-105" src="./public/live-img2.avif" alt="live-img2">
+                </a>
+            </div>
+
+            <div>
+                <a href="https://in.bookmyshow.com/explore/kids-chennai?referrerBase=">
+                    <img class="h-[230px] w-[230px] rounded-lg transition-transform duration-500 hover:scale-105" src="./public/live-img3.avif" alt="live-img3">
+                </a>
+            </div>
+
+            <div>
+                <a href="https://in.bookmyshow.com/explore/comedy-shows-chennai?referrerBase=">
+                    <img class="h-[230px] w-[230px] rounded-lg transition-transform duration-500 hover:scale-105" src="./public/live-img4.avif" alt="live-img4">
+                </a>
+            </div>
+
+            <div>
+                <a href="https://in.bookmyshow.com/explore/music-shows-chennai?referrerBase=">
+                    <img class="h-[230px] w-[230px] rounded-lg transition-transform duration-500 hover:scale-105" src="./public/live-img5.avif" alt="live-img5">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bg-[rgb(45,48,73)] p-6">
+        <div>
+            <a href="https://in.bookmyshow.com/explore/stream-movies-bms-premier">
+                <img class="w-[80vw] p-8 rounded-lg cursor-pointer" src="./public/playbtn.avif" alt="">
+            </a>
+        </div>
+        <div> 
+            <p>
+                <h1 class="roboto text-white text-2xl font-bold p-4 ">Premieres</h1>
+                <p class="roboto text-white p-[15px]">Brand new releases every Friday</p>
+            </p>
+        </div>
+        <div class="flex flex-wrap justify-center items-center justify-around gap-5 p-2">
+            <div>
+                <a href="https://in.bookmyshow.com/chennai/movies/gulaabi/ET00415765">
+                    <img class="w-[250px] rounded-lg transition-transform duration-500 hover:scale-105" src="./public/premiere-img1.avif" alt="premiere-img1"><br>
+                    <h4 class="roboto text-white font-bold">Gulaabi</h4>
+                    <p class="roboto text-white">Marathi</p>
+                </a>
+            </div>
+            <div>
+                <a href="https://in.bookmyshow.com/chennai/movies/the-best-christmas-pageant-ever/ET00422430">
+                    <img class="w-[250px] rounded-lg transition-transform duration-500 hover:scale-105" src="./public/premiere-img2.avif" alt="premiere-img2"><br>
+                    <h4 class="roboto text-white font-bold">The Best Christmas Pageant Ever</h4>
+                    <p class="roboto text-white">English</p>
+                </a>
+            </div>
+            <div>
+                <a href="https://in.bookmyshow.com/chennai/movies/97-minutes/ET00421038">
+                    <img class="w-[250px] rounded-lg transition-transform duration-500 hover:scale-105" src="./public/premiere-img3.avif" alt="premiere-img3"><br>
+                    <h4 class="roboto text-white font-bold">97 Minutes</h4>
+                    <p class="roboto text-white">English</p>
+                </a>
+            </div>
+            <div>
+                <a href="https://in.bookmyshow.com/chennai/movies/sniper-the-last-stand/ET00429065">
+                    <img class="w-[250px] rounded-lg transition-transform duration-500 hover:scale-105" src="./public/premiere-img4.avif" alt="premiere-img4"><br>
+                    <h4 class="roboto text-white font-bold">Sniper:The Last Stand</h4>
+                    <p class="roboto text-white">English</p>
+                </a>
+            </div>
+            <div>
+                <a href="https://in.bookmyshow.com/chennai/movies/the-count-of-montecristo/ET00430499">
+                    <img class="w-[250px] rounded-lg transition-transform duration-500 hover:scale-105" src="./public/premiere-img5.avif" alt="premiere-img5"><br>
+                    <h4 class="roboto text-white font-bold">The Count Of Monte-Cristo</h3>
+                    <p class="roboto text-white">French</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="bg-gray-100 p-2 lg:text-left md:text-center sm:text-center">
+        <h2 class="roboto font-bold text-2xl text-gray-800 p-4 sm:text-center md:text-center lg:text-left">Your Music Studio</h2>
+        
+        <div class="flex flex-wrap md:w[50%] md:grid-cols-2 sm:grid-cols-1 justify-center items-center justify-around gap-6 ">
+            <div>
+                <a href="https://in.bookmyshow.com/events/timeless-melodies-of-a-lifetime-k-s-chithra-live/ET00427647">
+                    <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105" src="./public/music-img1.avif" alt="music-img1"><br>
+                    <h3 class="roboto text-lg font-bold">TIMELESS-Melodies of a <br>lifetime- K.S Chithra Live</h3>
+                    <p class="roboto text-sm text-gray-500">YMCA Grounds: Chennai<br>Concerts</p>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://in.bookmyshow.com/events/sunburn-holi-ft-timmy-trumpet-chennai/ET00429450">
+                    <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105" src="./public/music-img2.avif" alt="music-img2"><br>
+                    <h3 class="roboto text-lg font-bold">Sunburn Holi ft. Timmy <br>Trumpet - Chennai</h3>
+                    <p class="roboto text-sm text-gray-500">Venue To Be Announced: <br>Chennai Concerts</p>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://in.bookmyshow.com/events/tcs-ruhaniyat-chennai/ET00424929">
+                    <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105" src="./public/music-img3.avif" alt="music-img3"><br>
+                    <h3 class="roboto text-lg font-bold">TCS RUHANIYAT- <br> CHENNAI</h3>
+                    <p class="roboto text-sm text-gray-500">Madras Race Club <br>Concerts</p>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://in.bookmyshow.com/events/vineet-sreenivasan-live-in-concert-chennai/ET00422106">
+                    <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105" src="./public/music-img4.avif" alt="music-img4"><br>
+                    <h3 class="roboto text-lg font-bold">Vineet Sreenivasan Live in <br> Concert - Chennai</h3>
+                    <p class="roboto text-sm text-gray-500">Venue To Be Announced: <br>Chennai Concerts </p>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://in.bookmyshow.com/events/shreya-ghoshal-live-in-concert/ET00424806">
+                    <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105" src="./public/music-img5.avif" alt="music-img5"><br>
+                    <h3 class="roboto text-lg font-bold">Shreya Ghoshal Live In <br>Concert - Coimbatore</h3>
+                    <p class="roboto text-sm text-gray-500">Codissia Ground: Coimbatore <br>Concerts</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bg-gray-100 p-2">
+        <h2 class="roboto text-2xl font-bold text-gray-800 pt-6 p-4 sm:text-center md:text-center lg:text-left">Outdoor Events</h2>
+        <div class="flex flex-wrap md:grid-cols-2 sm:grid-cols-1 justify-center items-center justify-around gap-6">
+            <div>
+                <a href="https://in.bookmyshow.com/activities/rang-de-holi-ft-dj-sunny-leone-ymca-nandanam/ET00429120">
+                    <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105" src="./public/out-img1.avif" alt="out-img1"><br>
+                    <h3 class="roboto text-lg font-bold">RANG DE HOLI - ft DJ <br>SUNNY LEONE @ YMCA...</h3>
+                    <p class="roboto text-sm text-gray-500">YMCA Nandanam: Chennai<br>Concerts</p>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://in.bookmyshow.com/plays/humare-ram-ft-ashutosh-rana-and-rahull-r-bhuchar/ET00376688">
+                    <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105 " src="./public/out-img2.avif" alt="out-img2"><br>
+                    <h3 class="roboto text-lg font-bold">HUMARE RAM Ft Ashutosh <br>Rana and Rahull R Bhuchar</h3>
+                    <p class="roboto text-sm text-gray-500">Sir Mutha Venkatasubba Rao <br>Concert Hall: Chennai</p>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://in.bookmyshow.com/events/adults-only-stand-up-comedy/ET00354828">
+                    <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105 " src="./public/out-img3.avif" alt="out-img3"><br>
+                    <h3 class="roboto text-lg font-bold">Adults Only - English Stand <br>up</h3>
+                    <p class="roboto text-sm text-gray-500">Trinity Studio: <br>Kodambakkam</p>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://in.bookmyshow.com/sports/chennaiyin-fc-vs-punjab-fc/ET00416666">
+                    <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105 " src="./public/out-img4.avif" alt="out-img4"><br>
+                    <h3 class="roboto text-lg font-bold">CHENNAIYIN FC vs <br>PUNJAB FC</h3>
+                    <p class="roboto text-sm text-gray-500">Jawaharlal Nehru Stadium: <br> Chennai</p>
+                </a>
+            </div>
+            
+            <div>
+                <a href="https://in.bookmyshow.com/events/prabhu-devas-vibe-live-in-dance-concert/ET00424133">
+                    <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105 " src="./public/out-img5.avif" alt="out-img5"><br>
+                    <h3 class="roboto text-lg font-bold">PRABHU DEVA'S VIBE LIVE <br>IN DANCE CONCERT</h3>
+                    <p class="roboto text-sm text-gray-500">YMCA Grounds: <br>Chennai</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bg-gray-100 p-2">
+        <h2 class="roboto text-2xl font-bold text-gray-800 pt-6 p-4 sm:text-center md:text-center lg:text-left">Laughter Therapy</h2>
+        <div class="flex flex-wrap md:grid-cols-2 sm:grid-cols-1 justify-center items-center justify-around gap-6">
+            <div>
+                <a href="https://in.bookmyshow.com/events/daily-ka-kaam-hai-by-aakash-gupta/ET00426994">
+                    <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105" src="./public/laugh-img1.avif" alt="laugh-img1"><br>
+                    <h3 class="roboto text-lg font-bold">Daily Ka Kaam Hai By <br> Aakash Gupta - Chennai</h3>
+                    <p class="roboto text-sm text-gray-500">The Music Academy: <br>Chennai</p>
+                </a>
+            </div>
+
+            <div>
+                <a href="https://in.bookmyshow.com/events/ajooba-stand-up-comedy-special-by-aadar-malik/ET00368615">
+                    <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105" src="./public/laugh-img2.avif" alt="laugh-img2"><br>
+                    <h3 class="roboto text-lg font-bold">Ajooba - Stand Up Comedy <br>Special by Aadar Malik</h3>
+                    <p class="roboto text-sm text-gray-500">Offbeat Music Ventures: <br>Chennai</p>
+                </a>
+            </div>
+
+            <div>
+                <a href="https://in.bookmyshow.com/events/samay-raina-unfiltered/ET00423468">
+                    <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105" src="./public/laugh-img3.avif" alt="laugh-img3"><br>
+                    <h3 class="roboto text-lg font-bold">Samay Raina Unfiltered</h3>
+                    <p class="roboto text-sm text-gray-500">Sir Mutha Venkatasubba Rao <br>Concert Hall: <br>Chennai</p>
+                </a>
+            </div>
+
+            <div>
+                <a href="https://in.bookmyshow.com/events/faiyaaz-hussain-live/ET00398371">
+                    <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105" src="./public/laugh-img4.avif" alt="laugh-img4"><br>
+                    <h3 class="roboto text-lg font-bold">Faiyaaz Hussain <br>Live</h3>
+                    <p class="roboto text-sm text-gray-500">Museum Theartre: <br>Chennai</p>
+                </a>
+            </div>
+
+            <div>
+                <a href="https://in.bookmyshow.com/events/almost-there-but-not-quite-by-rohan-joshi/ET00428799">
+                    <img class="w-[250px] rounded-2xl transition-transform duration-500 hover:scale-105" src="./public/laugh-img5.avif" alt="laugh-img5"><br>
+                    <h3 class="roboto text-lg font-bold">Getting There (But Not <br>Quite) by Rohan Joshi</h3>
+                    <p class="roboto text-sm text-gray-500">Medai - The Stage, Alwarpet: <br>Chennai</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bg-[rgb(53,56,58)] flex flex-wrap md:grid-cols-2 sm:grid-cols-1 items-center gap-32 justify-around">
+        <div class="flex justify-center items-center gap-6 justify-around pt-6 pb-6">
+            <img src="./public/list-img.svg" alt="list-img">
+            <h4 class="roboto text-white text-xl font-bold">List Your Show</h4>
+            <p class="roboto text-white">Got a show,event,activity or a great experience? Partner with us & get listed on BookMyShow</p>
+        </div>
+        <div class="p-4">
+            <button class="roboto bg-red-500 text-white text-sm h-10 w-36 rounded-lg hover:bg-red-600" type="button">Contact today!</button>
+        </div>
+    </div>
+
+
+     <div class="bg-[rgb(61,62,65)] ">
+        <div class="flex flex-wrap md:grid-cols-1 sm:grid-cols-1 items-center justify-center justify-evenly  p-6 gap-12">
+            <div class="text-center items-center justify-center flex">
+                <a href="https://support.bookmyshow.com/support/home?regionCode=NCR">
+                    <img class="w-[50px] " src="./public/care-img.png" alt="care-img">
+                    <p class="roboto text-[rgb(160,160,160)] text-[10px] items-center justify-center text-center hover:text-white cursor-pointer">24/7 CUSTOMER CARE</p>
+                </a>
+            </div>
+            
+            <div>
+                <img class="w-[50px]" src="./public/ticket-img.png" alt="ticket-img">
+                <p class="roboto text-[rgb(160,160,160)] text-[10px] items-center justify-center text-center hover:text-white cursor-pointer">RESEND BOOKING CONFIRMATION</p>
+            </div>
+
+            <div>
+                <img class="w-[50px]" src="./public/mail-img.png" alt="mail-img">
+                <p class="roboto text-[rgb(160,160,160)] text-[10px] items-center justify-center text-center hover:text-white cursor-pointer">SUBSCRIBE TO THE NEWSLETTER</p>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bg-[rgb(45,48,51)] p-6 pb-10">
+        
+        <div>
+            <h5 class="roboto text-gray-400 text-[15px] font-bold pb-4 pt-2 ">MOVIES NOW SHOWING IN CHENNAI</h5>
+            <p class="roboto text-gray-400 text-[13px]">Vidaamuyarchi | Interstellar | Thandel | Kudumbasthan | Mr.HouseKeeping | Loveyapa | Badass Ravi Kumar | Narayaneente Moonnanmakkal | Conclave | Oru Vadakkan Veeragadha</p>
+        </div><br>
+        
+        <div>
+            <h5 class="roboto text-gray-400 text-[15px] font-bold pb-4 pt-2">UPCOMMING MOVIES IN CHENNAI</h5>
+            <p class="roboto text-gray-400 text-[13px]">Rhythm | Brahma Anandam | Nimitta Matra | Fire(2025) | Illiti | Painkili | Ilu Ilu | Kaadhal Enbadhu Podhu Udamai | 14 Days(Girlfriend Intlo)</p>
+        </div><br>
+        
+        <div>
+            <h5 class="roboto text-gray-400 text-[15px] font-bold pb-4 pt-2">MOVIES BY GENRE</h5>
+            <p class="roboto text-gray-400 text-[13px]">Drama Movies | Action Movies | Romantic Movies | Comedy Movies | Thriller Movies | Adventure Movies | Animation Movies | Anime Movies | Classic Movies | Biography Movies</p>
+        </div><br>
+        
+        <div>
+            <h5 class="roboto text-gray-400 text-[15px] font-bold pb-4 pt-2">MOVIES BY LANGUAGE</h5>
+            <p class="roboto text-gray-400 text-[13px]">Movies in English | Movies in Tamil | Movies in Malayalam | Movies in Hindi | Movies in Telugu | Movies in Japanese | Movies in Sindhi | Movies in Chattisgarhi</p>
+        </div><br>
+        
+        <div>
+            <h5 class="roboto text-gray-400 text-[15px] font-bold pb-4 pt-2">SPORTS EVENTS IN CHENNAI</h5>
+            <p class="roboto text-gray-400 text-[13px]">Running | Cricket | Football | Chess | Cycling | Badminton | Boxing | Card Games | Athletics | Mixed Martial Arts</p>
+        </div><br>
+        
+        <div>
+            <h5 class="roboto text-gray-400 text-[15px] font-bold pb-4 pt-2">EVENTS IN TOP CITIES</h5>
+            <p class="roboto text-gray-400 text-[13px]">Events in Mumbai | Events in Delhi-NCR | Events in Chennai | Events in Bengaluru | Events in Hyderabad | Events in Pune | Events in Ahmedabad | Events in Kolkata | Events in Kochi</p>
+        </div><br>
+        
+        <div>
+            <h5 class="roboto text-gray-400 text-[15px] font-bold pb-4 pt-2">COUNTRIES</h5>
+            <p class="roboto text-gray-400 text-[13px]">Indonesia | Singapore | UAE | Sri Lanka |West Indies</p>
+        </div><br>
+        
+        <div>
+            <h5 class="roboto text-gray-400 text-[15px] font-bold pb-4 pt-2">HELP</h5>
+            <p class="roboto text-gray-400 text-[13px]">About Us | Contact Us | Current Opening | Press Coverage | Sitemap | FAQ's | Trems and Conditions | Privacy policy</p>
+        </div><br>
+        
+        <div>
+            <h5 class="roboto text-gray-400 text-[15px] font-bold pb-4 pt-2">BOOKMYSHOW EXCLUSIVES</h5>
+            <p class="roboto text-gray-400 text-[13px]">Lollapalooza India | BookAChange | Corporate Vouchers | Gift Cards | List My Show | Offers | Stream | Trailers</p>
+        </div><br>
+    </div>
+
+<!--     
+        <hr class="border bg-[rgb(45,48,51)] border-[#ccc]">md:top-[11300px] sm:top-[11300px] xs:top-[11500px]
+        <img class="bg-[rgb(45,48,51)] p-2 absolute top-[5440px] left-[50%]" src="./public/logo-img.svg" alt="logo-img">sm:top-[50vh] sm:left-[50%] sm:w-20 md:top-[60vh] md:left-[50%] md:w-24 lg:w-28
+     -->
+    <div>
+        <hr class="absolute border border-[#ccc] w-full "  style="padding-top: 2%; border-top: none; border-left: none; border-right: none;">
+        <img class="absolute  left-[50%] transform -translate-x-1/2  bg-[rgb(45,48,51)] cursor-pointer md:p-2 sm:pb-2 " src="./public/logo-img.svg" alt="logo-img">
+    </div>
+
+    <div class="bg-[rgb(45,48,51)] p-4 justify-evenly pt-10 pb-10">
+        <div class="flex flex-wrap md:grid-cols-2 sm:grid-cols-1 items-center justify-center pt-6 gap-6">
+            <div>
+                <a href="https://www.facebook.com/BookMyShowIN">
+                    <img class="rounded-3xl transition-transform duration-500 hover:scale-125 brightness-50 hover:brightness-100" src="./public/facebook.png" alt="">
+                </a>
+            </div>
+        
+            <div>
+                <a href="https://twitter.com/BookMyShow/">
+                    <img class="rounded-3xl transition-transform duration-500 hover:scale-125 brightness-50 hover:brightness-100" src="./public/x.png" alt="">
+                </a>
+            </div>
+        
+            <div>
+                <a href="https://www.instagram.com/bookmyshowin/">
+                    <img class="rounded-3xl transition-transform duration-500 hover:scale-125 brightness-50 hover:brightness-100" src="./public/instagram.png" alt="">
+                </a>
+            </div>
+        
+            <div>
+                <a href="https://www.youtube.com/user/BookMyShow/featured">
+                    <img class="rounded-3xl transition-transform duration-500 hover:scale-125 brightness-50 hover:brightness-100" src="./public/youtube.png" alt="">
+                </a>
+            </div>
+        
+            <div>
+                <a href="https://www.pinterest.com/bookmyshow/">
+                    <img class="rounded-3xl transition-transform duration-500 hover:scale-125 brightness-50 hover:brightness-100" src="./public/pic.png" alt="">
+                </a>
+            </div>
+        
+            <div>
+                <a href="https://www.linkedin.com/company/bookmyshow/">
+                    <img class="rounded-3xl h-[36px] transition-transform duration-500 hover:scale-125 brightness-50 hover:brightness-100" src="./public/in.jpg" alt="">
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="roboto bg-[rgb(45,48,51)] items-center justify-center text-center text-[12px] pt-20 pb-10 text-[rgb(160,160,160)]">
+        <p>Copyright 2025 . Bigtree Entertainment Pvt.Ltd. All Rights Reserved. 
+        <br>The content and images used on this site are copyright prodected and copyrights vests with the respective owners.The usage of the content and images on this website is indented to promote the works and no endorsement of the artist shall be implied.
+        <br>Unauthorized use is prohibited and punishable by law. </p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
