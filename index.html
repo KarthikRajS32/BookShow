@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookyShowTickets</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script>
-  module.exports = {
+ tailwind.config = {
   theme: {
     extend: {
       screens: {
@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    
     
    <div class="container flex flex-col sm:flex-row justify-center items-center justify-evenly p-5">
     <div class="flex items-center justify-around gap-12">
@@ -82,9 +83,9 @@
     </div>
 
 
-    <div class="bg-gray-100 p-2">
+    <div class="bg-gray-100 p-5">
        
-        <h1 class="roboto text-2xl font-bold p-4 sm:text-center md:text-center lg:text-left">Recommended Movies</h1>
+        <h1 class="roboto text-2xl font-bold p-8 sm:text-center md:text-center lg:text-left pl-10">Recommended Movies</h1>
        
         <div class="flex flex-wrap md:w[50%] md:grid-cols-2 sm:grid-cols-1 justify-center items-center justify-around gap-6">
             <div>
@@ -181,8 +182,8 @@
         </div>
         <div> 
             <p>
-                <h1 class="roboto text-white text-2xl font-bold p-4 ">Premieres</h1>
-                <p class="roboto text-white p-[15px]">Brand new releases every Friday</p>
+                <h1 class="roboto text-white text-2xl font-bold p-4 pl-10">Premieres</h1>
+                <p class="roboto text-white p-[15px] pl-10">Brand new releases every Friday</p>
             </p>
         </div>
         <div class="flex flex-wrap justify-center items-center justify-around gap-5 p-2">
@@ -227,7 +228,7 @@
 
 
     <div class="bg-gray-100 p-2 lg:text-left md:text-center sm:text-center">
-        <h2 class="roboto font-bold text-2xl text-gray-800 p-4 sm:text-center md:text-center lg:text-left">Your Music Studio</h2>
+        <h2 class="roboto font-bold text-2xl text-gray-800 p-4 sm:text-center md:text-center lg:text-left pl-10">Your Music Studio</h2>
         
         <div class="flex flex-wrap md:w[50%] md:grid-cols-2 sm:grid-cols-1 justify-center items-center justify-around gap-6 ">
             <div>
@@ -274,7 +275,7 @@
 
 
     <div class="bg-gray-100 p-2">
-        <h2 class="roboto text-2xl font-bold text-gray-800 pt-6 p-4 sm:text-center md:text-center lg:text-left">Outdoor Events</h2>
+        <h2 class="roboto text-2xl font-bold text-gray-800 pt-6 p-4 sm:text-center md:text-center lg:text-left pl-10">Outdoor Events</h2>
         <div class="flex flex-wrap md:grid-cols-2 sm:grid-cols-1 justify-center items-center justify-around gap-6">
             <div>
                 <a href="https://in.bookmyshow.com/activities/rang-de-holi-ft-dj-sunny-leone-ymca-nandanam/ET00429120">
@@ -320,7 +321,7 @@
 
 
     <div class="bg-gray-100 p-2">
-        <h2 class="roboto text-2xl font-bold text-gray-800 pt-6 p-4 sm:text-center md:text-center lg:text-left">Laughter Therapy</h2>
+        <h2 class="roboto text-2xl font-bold text-gray-800 pt-6 p-4 sm:text-center md:text-center lg:text-left pl-10">Laughter Therapy</h2>
         <div class="flex flex-wrap md:grid-cols-2 sm:grid-cols-1 justify-center items-center justify-around gap-6">
             <div>
                 <a href="https://in.bookmyshow.com/events/daily-ka-kaam-hai-by-aakash-gupta/ET00426994">
